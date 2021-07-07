@@ -1,4 +1,6 @@
-﻿using Unity.FPS.Game;
+﻿using System.Collections;
+using System.Collections.Generic;
+using Unity.FPS.Game;
 using UnityEngine;
 
 namespace Unity.FPS.Gameplay
