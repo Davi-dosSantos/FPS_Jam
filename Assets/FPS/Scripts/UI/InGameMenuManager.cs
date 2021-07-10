@@ -8,6 +8,8 @@ namespace Unity.FPS.UI
 {
     public class InGameMenuManager : MonoBehaviour
     {
+        public GameObject MenuInventory;
+
         [Tooltip("Root GameObject of the menu used to toggle its activation")]
         public GameObject MenuRoot;
 
@@ -45,6 +47,8 @@ namespace Unity.FPS.UI
             m_FramerateCounter = FindObjectOfType<FramerateCounter>();
             DebugUtility.HandleErrorIfNullFindObject<FramerateCounter, InGameMenuManager>(m_FramerateCounter, this);
 
+            MenuInventory.SetActive(false);
+
             MenuRoot.SetActive(false);
 
             LookSensitivitySlider.value = m_PlayerInputsHandler.LookSensitivity;
@@ -63,7 +67,13 @@ namespace Unity.FPS.UI
         void Update()
         {
             // Lock cursor when clicking outside of menu
-            if (!MenuRoot.activeSelf && Input.GetMouseButtonDown(0))
+            if (!MenuInventory.activeSelf && Input.GetKeyDown("i"))
+            {
+                SetInventoryActivation(!MenuInventory.activeSelf);
+            }
+            
+
+                if (!MenuRoot.activeSelf && Input.GetMouseButtonDown(0))
             {
                 Cursor.lockState = CursorLockMode.Locked;
                 Cursor.visible = false;
@@ -102,6 +112,35 @@ namespace Unity.FPS.UI
         {
             SetPauseMenuActivation(false);
         }
+
+        public void CloseInventory()
+        {
+            SetInventoryActivation(false);
+        }
+
+        void SetInventoryActivation(bool active)
+        {
+            MenuInventory.SetActive(active);
+
+            if (MenuInventory.activeSelf)
+            {
+                Cursor.lockState = CursorLockMode.None;
+                Cursor.visible = true;
+                Time.timeScale = 0f;
+                AudioUtility.SetMasterVolume(VolumeWhenMenuOpen);
+
+                EventSystem.current.SetSelectedGameObject(null);
+            }
+            else
+            {
+                Cursor.lockState = CursorLockMode.Locked;
+                Cursor.visible = false;
+                Time.timeScale = 1f;
+                AudioUtility.SetMasterVolume(1);
+            }
+
+        }
+
 
         void SetPauseMenuActivation(bool active)
         {
