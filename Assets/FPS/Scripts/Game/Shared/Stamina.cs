@@ -8,8 +8,8 @@ public class Stamina : MonoBehaviour
     [Tooltip("Stamina ratio at which the critical stamina vignette starts appearing")]
     public float CriticalStaminaRatio = 0.3f;
     
-    private float StaminaLossPerFrame = 2f;
-    private float StaminaGainPerFrame = 2f;
+    private float StaminaLossPerFrame = .4f;
+    private float StaminaGainPerFrame = .2f;
 
     public float CurrentStamina { get; set; }
 
