@@ -23,6 +23,9 @@ public class Stamina : MonoBehaviour
         TimerToRegenerate = 10f;
     }
 
+    void Update() {
+    }
+
     public void RegenerateStamina() {
         if (this.CurrentStamina < MaxStamina)
             this.CurrentStamina += StaminaGainPerFrame;
