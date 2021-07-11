@@ -118,6 +118,7 @@ namespace Unity.FPS.Gameplay
         }
 
         Health m_Health;
+        Stamina m_Stamina;
         PlayerInputHandler m_InputHandler;
         CharacterController m_Controller;
         PlayerWeaponsManager m_WeaponsManager;
@@ -157,6 +158,9 @@ namespace Unity.FPS.Gameplay
 
             m_Health = GetComponent<Health>();
             DebugUtility.HandleErrorIfNullGetComponent<Health, PlayerCharacterController>(m_Health, this, gameObject);
+
+            m_Stamina = GetComponent<Stamina>();
+            DebugUtility.HandleErrorIfNullGetComponent<Stamina, PlayerCharacterController>(m_Stamina, this, gameObject);
 
             m_Actor = GetComponent<Actor>();
             DebugUtility.HandleErrorIfNullGetComponent<Actor, PlayerCharacterController>(m_Actor, this, gameObject);
@@ -289,12 +293,21 @@ namespace Unity.FPS.Gameplay
             // character movement handling
             bool isSprinting = m_InputHandler.GetSprintInputHeld();
             {
+
+                float speedModifier = 1f;
+
                 if (isSprinting)
                 {
+                    m_Stamina.ResetTimer();
+                    m_Stamina.LoseStamina();
                     isSprinting = SetCrouchingState(false, false);
-                }
+                    speedModifier = SprintSpeedModifier;
 
-                float speedModifier = isSprinting ? SprintSpeedModifier : 1f;
+                } else {
+                    m_Stamina.StaminaTimer();
+                    if (m_Stamina.CanRegenerate())
+                        m_Stamina.RegenerateStamina();
+                }
 
                 // converts move input to a worldspace vector based on our character's transform orientation
                 Vector3 worldspaceMoveInput = transform.TransformVector(m_InputHandler.GetMoveInput());
