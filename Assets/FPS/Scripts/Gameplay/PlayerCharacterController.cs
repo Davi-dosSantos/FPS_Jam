@@ -296,14 +296,14 @@ namespace Unity.FPS.Gameplay
 
                 float speedModifier = 1f;
 
-                if (isSprinting)
+                if (isSprinting && m_Stamina.CurrentStamina > 0)
                 {
                     m_Stamina.ResetTimer();
                     m_Stamina.LoseStamina();
                     isSprinting = SetCrouchingState(false, false);
                     speedModifier = SprintSpeedModifier;
 
-                } else {
+                } else if (!isSprinting) {
                     m_Stamina.StaminaTimer();
                     if (m_Stamina.CanRegenerate())
                         m_Stamina.RegenerateStamina();

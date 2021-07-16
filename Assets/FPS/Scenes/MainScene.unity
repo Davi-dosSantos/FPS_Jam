@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.2294054, g: 0.25521177, b: 0.32522693, a: 1}
+  m_IndirectSpecularColor: {r: 0.22936943, g: 0.2551916, b: 0.32509872, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -714,7 +714,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 131050579}
-  m_RootOrder: 93
+  m_RootOrder: 51
   m_LocalEulerAnglesHint: {x: 0, y: -0.976, z: 0}
 --- !u!1 &35126847
 GameObject:
@@ -1675,6 +1675,56 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 75684464}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &76197443
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 76197444}
+  - component: {fileID: 76197445}
+  m_Layer: 0
+  m_Name: MatarDemonio
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &76197444
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 76197443}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 828590404}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &76197445
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 76197443}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a3cff9918d8018a44989bf444e3232f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Title: Demonio
+  Description: Elimine o demonio na catedral.
+  IsOptional: 0
+  DelayVisible: 0
+  MustKillAllEnemies: 1
+  KillsToCompleteObjective: 1
+  NotificationEnemiesRemainingThreshold: 3
 --- !u!1001 &78308658
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2331,6 +2381,7 @@ Transform:
   - {fileID: 984462214}
   - {fileID: 1586381446}
   - {fileID: 786235825}
+  - {fileID: 34681091}
   - {fileID: 802028335}
   - {fileID: 394707888}
   - {fileID: 1245694975}
@@ -2373,7 +2424,6 @@ Transform:
   - {fileID: 1827388412}
   - {fileID: 2066916389}
   - {fileID: 2130093490}
-  - {fileID: 34681091}
   - {fileID: 41048762}
   - {fileID: 1559479669}
   - {fileID: 1725595435}
@@ -2428,6 +2478,7 @@ Transform:
   - {fileID: 1606057145}
   - {fileID: 1304219144}
   - {fileID: 470366455}
+  - {fileID: 1871814510}
   - {fileID: 1460603136}
   - {fileID: 548151245}
   - {fileID: 1989039684}
@@ -2451,7 +2502,6 @@ Transform:
   - {fileID: 1037824269}
   - {fileID: 1756059206}
   - {fileID: 1964815306}
-  - {fileID: 1871814510}
   - {fileID: 9887656}
   - {fileID: 1842442283}
   - {fileID: 158929007}
@@ -2466,11 +2516,11 @@ Transform:
   - {fileID: 1266944444}
   - {fileID: 1438593066}
   - {fileID: 1399717482}
+  - {fileID: 142652112}
   - {fileID: 1831711194}
   - {fileID: 1539776275}
   - {fileID: 1947755975}
   - {fileID: 749430345}
-  - {fileID: 142652112}
   - {fileID: 189791841}
   - {fileID: 1219952248}
   - {fileID: 1829120863}
@@ -2506,6 +2556,7 @@ Transform:
   - {fileID: 1888644349}
   - {fileID: 1578146554}
   - {fileID: 2050556859}
+  - {fileID: 722488818}
   - {fileID: 1451041802}
   - {fileID: 883283202}
   - {fileID: 2003727541}
@@ -2566,7 +2617,6 @@ Transform:
   - {fileID: 1458260308}
   - {fileID: 498085927}
   - {fileID: 505617217}
-  - {fileID: 722488818}
   - {fileID: 293546857}
   - {fileID: 1287752206}
   - {fileID: 1726828569}
@@ -2885,7 +2935,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 131050579}
-  m_RootOrder: 190
+  m_RootOrder: 186
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!108 &142652113
 Light:
@@ -3223,7 +3273,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &167268356
 PrefabInstance:
@@ -4785,6 +4835,130 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 271191231}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &271647995
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 271647996}
+  - component: {fileID: 271647998}
+  - component: {fileID: 271647997}
+  m_Layer: 0
+  m_Name: EncontrarMansao
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &271647996
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 271647995}
+  m_LocalRotation: {x: 0, y: 0.026176924, z: 0, w: 0.99965733}
+  m_LocalPosition: {x: 81.64, y: 0, z: 53.43}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 828590404}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 3, z: 0}
+--- !u!114 &271647997
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 271647995}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 37fff5bb19450134f9e207f3823811fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Title: "Mans\xE3o"
+  Description: "Talvez a mans\xE3o nesta cidade tenha algo para me ajudar."
+  IsOptional: 0
+  DelayVisible: 2
+  DestroyRoot: {fileID: 271647996}
+--- !u!65 &271647998
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 271647995}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 3.4669116, y: 4.737892, z: 0.77934873}
+  m_Center: {x: 1.9370298, y: -9.793498, z: 0.110325634}
+--- !u!1 &273490637
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 273490638}
+  - component: {fileID: 273490640}
+  - component: {fileID: 273490639}
+  m_Layer: 0
+  m_Name: Respostas
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &273490638
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 273490637}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -7.51, y: 18.29, z: 302}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 828590404}
+  m_RootOrder: 9
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &273490639
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 273490637}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 37fff5bb19450134f9e207f3823811fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Title: Respostas
+  Description: Continue e descubra o que pode ter acontecido aqui...
+  IsOptional: 0
+  DelayVisible: 2
+  DestroyRoot: {fileID: 273490638}
+--- !u!65 &273490640
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 273490637}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 38.938644, y: 33.98297, z: 1}
+  m_Center: {x: 18.678932, y: -3.8491402, z: 0}
 --- !u!1001 &275247862
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9427,6 +9601,54 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 504479012}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &504594677
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 504594678}
+  - component: {fileID: 504594679}
+  m_Layer: 0
+  m_Name: EncontrarChaveIgreja
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &504594678
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 504594677}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 828590404}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &504594679
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 504594677}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 33498356859fc2040b30fc2e60beac7f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Title: Chave
+  Description: "Encontre algo que possa te ajudar a abrir o port\xE3o da catedral."
+  IsOptional: 0
+  DelayVisible: 2
+  ItemToPickup: {fileID: 990327726}
 --- !u!1001 &505617216
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11989,7 +12211,7 @@ RectTransform:
   - {fileID: 762018738}
   - {fileID: 970490017}
   m_Father: {fileID: 0}
-  m_RootOrder: 15
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -13475,7 +13697,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 131050579}
-  m_RootOrder: 286
+  m_RootOrder: 226
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!108 &722488819
 Light:
@@ -13776,6 +13998,12 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 471316, guid: eb76103868aa7dc4c8e39613a5835fb5,
     type: 3}
   m_PrefabInstance: {fileID: 730747128}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &730876223 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 598277302063295029, guid: 012d63212fd1fe646b661cb8446c7bd4,
+    type: 3}
+  m_PrefabInstance: {fileID: 3291525241978217376}
   m_PrefabAsset: {fileID: 0}
 --- !u!4 &735270096 stripped
 Transform:
@@ -15324,6 +15552,46 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 824195383}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &828590403
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 828590404}
+  m_Layer: 0
+  m_Name: ObjectiveList
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &828590404
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 828590403}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 314.55646, y: 23.404984, z: 267.90677}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 2009815941}
+  - {fileID: 730876223}
+  - {fileID: 1645013368}
+  - {fileID: 271647996}
+  - {fileID: 1817850028}
+  - {fileID: 2001757518}
+  - {fileID: 504594678}
+  - {fileID: 2111107406}
+  - {fileID: 76197444}
+  - {fileID: 273490638}
+  m_Father: {fileID: 0}
+  m_RootOrder: 15
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &831301917
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -18755,7 +19023,7 @@ Transform:
   m_LocalScale: {x: 0.15979367, y: 1, z: 0.15905344}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1033783995
 GameObject:
@@ -19695,7 +19963,7 @@ Transform:
   - {fileID: 107263533}
   - {fileID: 459336151}
   m_Father: {fileID: 0}
-  m_RootOrder: 14
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1087251131
 PrefabInstance:
@@ -20355,6 +20623,12 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 637113266}
   m_PrefabAsset: {fileID: 0}
+--- !u!95 &1122043741 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 7389507112651452681, guid: 6dc4cf4496348884d8ee27743ae38562,
+    type: 3}
+  m_PrefabInstance: {fileID: 637113266}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1122043742
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20367,7 +20641,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1857b2df8de24b24190ce9e067d2e1e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Animator: {fileID: 0}
+  Animator: {fileID: 1122043741}
   AttackStopDistanceRatio: 0
   RandomHitSparks: []
   OnDetectVfx: []
@@ -25406,7 +25680,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1402848970
 MonoBehaviour:
@@ -29398,6 +29672,68 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1326899849}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1645013367
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1645013368}
+  - component: {fileID: 1645013370}
+  - component: {fileID: 1645013369}
+  m_Layer: 0
+  m_Name: EncontrarPortao
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1645013368
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1645013367}
+  m_LocalRotation: {x: 0, y: -0.06975647, z: 0, w: 0.9975641}
+  m_LocalPosition: {x: -34.64, y: 0, z: 58.41}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 828590404}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: -8, z: 0}
+--- !u!114 &1645013369
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1645013367}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 37fff5bb19450134f9e207f3823811fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Title: Igreja
+  Description: "Encontre o port\xE3o que leva a catedral da cidade"
+  IsOptional: 0
+  DelayVisible: 2
+  DestroyRoot: {fileID: 1645013368}
+--- !u!65 &1645013370
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1645013367}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 45.092987, y: 40.560665, z: 1}
+  m_Center: {x: 7.978073, y: -19.780333, z: 0}
 --- !u!1001 &1647580446
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -32381,6 +32717,55 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 407369920}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1817850027
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1817850028}
+  - component: {fileID: 1817850029}
+  m_Layer: 0
+  m_Name: EncontrarChaveMansao
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1817850028
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1817850027}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 828590404}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1817850029
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1817850027}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 33498356859fc2040b30fc2e60beac7f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Title: Chave
+  Description: "Encontre a chave para a mans\xE3o. Ser\xE1 que os zumbis podem ser
+    uma pista?"
+  IsOptional: 0
+  DelayVisible: 2
+  ItemToPickup: {fileID: 887789485}
 --- !u!4 &1820190871 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 405124, guid: 513a0e1241d2a72459d1db2f9dc27f3e,
@@ -33956,7 +34341,7 @@ Transform:
   m_LocalScale: {x: -1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 131050579}
-  m_RootOrder: 171
+  m_RootOrder: 148
   m_LocalEulerAnglesHint: {x: 0, y: 1.012, z: 0}
 --- !u!1 &1872187474
 GameObject:
@@ -36740,6 +37125,68 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1998302928}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &2001757517
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2001757518}
+  - component: {fileID: 2001757520}
+  - component: {fileID: 2001757519}
+  m_Layer: 0
+  m_Name: EntrarMansao
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2001757518
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2001757517}
+  m_LocalRotation: {x: 0, y: 0.026176924, z: 0, w: 0.99965733}
+  m_LocalPosition: {x: 81.76, y: 0, z: 55.55}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 828590404}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 3, z: 0}
+--- !u!114 &2001757519
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2001757517}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 37fff5bb19450134f9e207f3823811fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Title: "Mans\xE3o"
+  Description: "Talvez a mans\xE3o nesta cidade tenha algo para me ajudar."
+  IsOptional: 0
+  DelayVisible: 2
+  DestroyRoot: {fileID: 2001757518}
+--- !u!65 &2001757520
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2001757517}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 3.4669116, y: 4.737892, z: 0.77934873}
+  m_Center: {x: 1.9370298, y: -9.793498, z: 0.110325634}
 --- !u!1001 &2003078710
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -37026,6 +37473,68 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 2009540371}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &2009815940
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2009815941}
+  - component: {fileID: 2009815943}
+  - component: {fileID: 2009815942}
+  m_Layer: 0
+  m_Name: ChegarVila
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2009815941
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2009815940}
+  m_LocalRotation: {x: 0, y: -0.6427876, z: 0, w: 0.7660445}
+  m_LocalPosition: {x: -35.3, y: 4.7, z: -90.2}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 828590404}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: -80, z: 0}
+--- !u!114 &2009815942
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2009815940}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 37fff5bb19450134f9e207f3823811fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Title: Chegue a Vila
+  Description: "Atravesse a floresta da ilus\xE3o e encontre a vila dos rumores "
+  IsOptional: 0
+  DelayVisible: 2
+  DestroyRoot: {fileID: 2009815941}
+--- !u!65 &2009815943
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2009815940}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.7017899, y: 54.540764, z: 78.830536}
+  m_Center: {x: -0.8508949, y: -26.770382, z: -17.537766}
 --- !u!4 &2010006157 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 484950, guid: 1eb5970d54060cd4fa9d893223f463e4,
@@ -38637,6 +39146,68 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 2108971161}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &2111107405
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2111107406}
+  - component: {fileID: 2111107408}
+  - component: {fileID: 2111107407}
+  m_Layer: 0
+  m_Name: EntrarCatedral
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2111107406
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2111107405}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -80.73, y: 8.28, z: 142.63}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 828590404}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2111107407
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2111107405}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 37fff5bb19450134f9e207f3823811fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Title: Catedral
+  Description: "Talvez eu encontre respostas l\xE1 dentro..."
+  IsOptional: 0
+  DelayVisible: 2
+  DestroyRoot: {fileID: 2111107406}
+--- !u!65 &2111107408
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2111107405}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 4.2558594, y: 9.28142, z: 1}
+  m_Center: {x: 9.881256, y: -4.140712, z: 0}
 --- !u!1001 &2115105567
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -39330,7 +39901,7 @@ Transform:
   - {fileID: 365621994}
   - {fileID: 1025562103}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2729281212889745562
 GameObject:
@@ -39412,7 +39983,7 @@ Transform:
   - {fileID: 2729281214224612182}
   - {fileID: 2729281213191696912}
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2729281213170272050
 GameObject:
@@ -39442,7 +40013,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &2729281213191696912
 Transform:
@@ -39502,7 +40073,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2729281213735534850
 GameObject:
@@ -39532,7 +40103,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &2729281214152228920
 PrefabInstance:
@@ -39649,7 +40220,7 @@ PrefabInstance:
     - target: {fileID: 8746678193447392789, guid: 761cdc9e4e883334cbdcea062d0befa7,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 281.07
+      value: 276.76
       objectReference: {fileID: 0}
     - target: {fileID: 8746678193447392789, guid: 761cdc9e4e883334cbdcea062d0befa7,
         type: 3}
@@ -39659,7 +40230,7 @@ PrefabInstance:
     - target: {fileID: 8746678193447392789, guid: 761cdc9e4e883334cbdcea062d0befa7,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 234.61
+      value: 148.35
       objectReference: {fileID: 0}
     - target: {fileID: 8746678193447392789, guid: 761cdc9e4e883334cbdcea062d0befa7,
         type: 3}
@@ -39782,7 +40353,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2729281214538404664
 MonoBehaviour:
@@ -39811,7 +40382,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2729281214538404670
 GameObject:
@@ -40030,22 +40601,22 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 0}
+    m_TransformParent: {fileID: 828590404}
     m_Modifications:
     - target: {fileID: 598277302063295018, guid: 012d63212fd1fe646b661cb8446c7bd4,
         type: 3}
       propertyPath: m_Name
-      value: Objective1
+      value: MatarZumbis
       objectReference: {fileID: 0}
     - target: {fileID: 598277302063295018, guid: 012d63212fd1fe646b661cb8446c7bd4,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 598277302063295019, guid: 012d63212fd1fe646b661cb8446c7bd4,
         type: 3}
       propertyPath: Title
-      value: Chegue a vila
+      value: Demonios
       objectReference: {fileID: 0}
     - target: {fileID: 598277302063295019, guid: 012d63212fd1fe646b661cb8446c7bd4,
         type: 3}
@@ -40054,28 +40625,33 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 598277302063295019, guid: 012d63212fd1fe646b661cb8446c7bd4,
         type: 3}
+      propertyPath: IsOptional
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 598277302063295019, guid: 012d63212fd1fe646b661cb8446c7bd4,
+        type: 3}
       propertyPath: Description
-      value: "Atravesse a floresta da ilus\xE3o e encontre a vila dos rumores "
+      value: Elimine os demonios que assolam a vila
       objectReference: {fileID: 0}
     - target: {fileID: 598277302063295029, guid: 012d63212fd1fe646b661cb8446c7bd4,
         type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 598277302063295029, guid: 012d63212fd1fe646b661cb8446c7bd4,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 18.765915
+      value: -295.79053
       objectReference: {fileID: 0}
     - target: {fileID: 598277302063295029, guid: 012d63212fd1fe646b661cb8446c7bd4,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.9873657
+      value: -22.417618
       objectReference: {fileID: 0}
     - target: {fileID: 598277302063295029, guid: 012d63212fd1fe646b661cb8446c7bd4,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 24.452301
+      value: -243.45447
       objectReference: {fileID: 0}
     - target: {fileID: 598277302063295029, guid: 012d63212fd1fe646b661cb8446c7bd4,
         type: 3}
@@ -41375,6 +41951,16 @@ PrefabInstance:
     - target: {fileID: 3235725120536374800, guid: c996b53e9f849234393d1e90f68d1679,
         type: 3}
       propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3244674540524639750, guid: c996b53e9f849234393d1e90f68d1679,
+        type: 3}
+      propertyPath: m_listObjectives
+      value: 
+      objectReference: {fileID: 828590403}
+    - target: {fileID: 3244674540524639750, guid: c996b53e9f849234393d1e90f68d1679,
+        type: 3}
+      propertyPath: m_Objectives.Array.size
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3254100071281753346, guid: c996b53e9f849234393d1e90f68d1679,

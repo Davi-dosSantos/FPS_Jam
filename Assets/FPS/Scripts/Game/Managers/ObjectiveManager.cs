@@ -8,15 +8,28 @@ namespace Unity.FPS.Game
         List<Objective> m_Objectives = new List<Objective>();
         bool m_ObjectivesCompleted = false;
 
+        public GameObject m_listObjectives;
+        public List<GameObject> m_ObjectivesGO = new List<GameObject>();
+
         void Awake()
         {
-            Objective.OnObjectiveCreated += RegisterObjective;
+            int i = 0;
+            foreach (Transform child in m_listObjectives.transform) {
+                m_ObjectivesGO.Add(child.gameObject);
+                m_ObjectivesGO[i++].SetActive(false);
+                Objective.OnObjectiveCreated += RegisterObjective;
+            }
+            m_ObjectivesGO[0].SetActive(true);
         }
 
         void RegisterObjective(Objective objective) => m_Objectives.Add(objective);
 
         void Update()
         {
+            if (!m_ObjectivesGO[0].activeSelf) {
+                m_ObjectivesGO[0].SetActive(true);
+            }
+
             if (m_Objectives.Count == 0 || m_ObjectivesCompleted)
                 return;
 
@@ -37,6 +50,11 @@ namespace Unity.FPS.Game
         void OnDestroy()
         {
             Objective.OnObjectiveCreated -= RegisterObjective;
+        }
+
+        public void Continue() {
+            m_ObjectivesGO.Remove(m_ObjectivesGO[0]);
+            m_ObjectivesGO[0].SetActive(true);
         }
     }
 }
