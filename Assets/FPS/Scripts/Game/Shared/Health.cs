@@ -83,5 +83,9 @@ namespace Unity.FPS.Game
                 OnDie?.Invoke();
             }
         }
+
+        public bool checkDeath() {
+            return this.m_IsDead;
+        }
     }
 }
