@@ -8,7 +8,6 @@ namespace Unity.FPS.UI
 {
     public class InGameMenuManager : MonoBehaviour
     {
-        public GameObject MenuInventory;
 
         [Tooltip("Root GameObject of the menu used to toggle its activation")]
         public GameObject MenuRoot;
@@ -31,6 +30,8 @@ namespace Unity.FPS.UI
         [Tooltip("GameObject for the controls")]
         public GameObject ControlImage;
 
+        public GameObject GuideImage;
+
         PlayerInputHandler m_PlayerInputsHandler;
         Health m_PlayerHealth;
         FramerateCounter m_FramerateCounter;
@@ -47,7 +48,6 @@ namespace Unity.FPS.UI
             m_FramerateCounter = FindObjectOfType<FramerateCounter>();
             DebugUtility.HandleErrorIfNullFindObject<FramerateCounter, InGameMenuManager>(m_FramerateCounter, this);
 
-            MenuInventory.SetActive(false);
 
             MenuRoot.SetActive(false);
 
@@ -67,16 +67,12 @@ namespace Unity.FPS.UI
         void Update()
         {
             // Lock cursor when clicking outside of menu
-            if (!MenuInventory.activeSelf && Input.GetKeyDown("i"))
-            {
-                SetInventoryActivation(!MenuInventory.activeSelf);
-            }
             
-
-                if (!MenuRoot.activeSelf && Input.GetMouseButtonDown(0))
+        
+            if (!MenuRoot.activeSelf && Input.GetMouseButtonDown(0))
             {
-                Cursor.lockState = CursorLockMode.Locked;
-                Cursor.visible = false;
+                Cursor.lockState = CursorLockMode.None;
+                Cursor.visible = true;
             }
 
             if (Input.GetKeyDown(KeyCode.Escape))
@@ -91,6 +87,11 @@ namespace Unity.FPS.UI
                 if (ControlImage.activeSelf)
                 {
                     ControlImage.SetActive(false);
+                    return;
+                }
+                if (GuideImage.activeSelf)
+                {
+                    GuideImage.SetActive(false);
                     return;
                 }
 
@@ -111,34 +112,6 @@ namespace Unity.FPS.UI
         public void ClosePauseMenu()
         {
             SetPauseMenuActivation(false);
-        }
-
-        public void CloseInventory()
-        {
-            SetInventoryActivation(false);
-        }
-
-        void SetInventoryActivation(bool active)
-        {
-            MenuInventory.SetActive(active);
-
-            if (MenuInventory.activeSelf)
-            {
-                Cursor.lockState = CursorLockMode.None;
-                Cursor.visible = true;
-                Time.timeScale = 0f;
-                AudioUtility.SetMasterVolume(VolumeWhenMenuOpen);
-
-                EventSystem.current.SetSelectedGameObject(null);
-            }
-            else
-            {
-                Cursor.lockState = CursorLockMode.Locked;
-                Cursor.visible = false;
-                Time.timeScale = 1f;
-                AudioUtility.SetMasterVolume(1);
-            }
-
         }
 
 
@@ -188,6 +161,10 @@ namespace Unity.FPS.UI
         public void OnShowControlButtonClicked(bool show)
         {
             ControlImage.SetActive(show);
+        }
+        public void OnShowGuideButtonClicked(bool show)
+        {
+            GuideImage.SetActive(show);
         }
     }
 }
