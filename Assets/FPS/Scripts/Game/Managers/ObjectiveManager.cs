@@ -5,7 +5,7 @@ namespace Unity.FPS.Game
 {
     public class ObjectiveManager : MonoBehaviour
     {
-        List<Objective> m_Objectives = new List<Objective>();
+        public List<Objective> m_Objectives = new List<Objective>();
         bool m_ObjectivesCompleted = false;
 
         public GameObject m_listObjectives;
@@ -17,8 +17,8 @@ namespace Unity.FPS.Game
             foreach (Transform child in m_listObjectives.transform) {
                 m_ObjectivesGO.Add(child.gameObject);
                 m_ObjectivesGO[i++].SetActive(false);
-                Objective.OnObjectiveCreated += RegisterObjective;
             }
+            Objective.OnObjectiveCreated += RegisterObjective;
             m_ObjectivesGO[0].SetActive(true);
         }
 
@@ -26,8 +26,9 @@ namespace Unity.FPS.Game
 
         void Update()
         {
-            if (!m_ObjectivesGO[0].activeSelf) {
-                m_ObjectivesGO[0].SetActive(true);
+            if (m_ObjectivesGO[0] == null) {
+                Continue();
+                return;
             }
 
             if (m_Objectives.Count == 0 || m_ObjectivesCompleted)

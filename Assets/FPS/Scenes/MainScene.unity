@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.2294054, g: 0.25521177, b: 0.32522693, a: 1}
+  m_IndirectSpecularColor: {r: 0.22936943, g: 0.2551916, b: 0.32509872, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1704,7 +1704,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 828590404}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &76197445
 MonoBehaviour:
@@ -3002,6 +3002,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Cry Wolf
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 7e7960d5cd4809e4783e8f942be4f6d9,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7e7960d5cd4809e4783e8f942be4f6d9, type: 3}
@@ -5570,7 +5575,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 828590404}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 3, z: 0}
 --- !u!114 &271647997
 MonoBehaviour:
@@ -5632,7 +5637,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 828590404}
-  m_RootOrder: 9
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &273490639
 MonoBehaviour:
@@ -10639,6 +10644,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 504594678}
+  - component: {fileID: 504594680}
   - component: {fileID: 504594679}
   m_Layer: 0
   m_Name: EncontrarChaveIgreja
@@ -10655,11 +10661,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 504594677}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 97.639, y: -4.058, z: 58.572}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 828590404}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &504594679
 MonoBehaviour:
@@ -10670,14 +10676,28 @@ MonoBehaviour:
   m_GameObject: {fileID: 504594677}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 33498356859fc2040b30fc2e60beac7f, type: 3}
+  m_Script: {fileID: 11500000, guid: 37fff5bb19450134f9e207f3823811fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Title: Chave
-  Description: "Encontre algo que possa te ajudar a abrir o port\xE3o da catedral."
+  Description: "A chave do port\xE3o que leva \xE0 igreja pode estar por aqui..."
   IsOptional: 0
-  DelayVisible: 2
-  ItemToPickup: {fileID: 990327726}
+  DelayVisible: 0
+  DestroyRoot: {fileID: 504594678}
+--- !u!136 &504594680
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 504594677}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  m_Radius: 0.5
+  m_Height: 1
+  m_Direction: 1
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &505617216
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15407,12 +15427,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 730747128}
   m_PrefabAsset: {fileID: 0}
---- !u!4 &730876223 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 598277302063295029, guid: 012d63212fd1fe646b661cb8446c7bd4,
-    type: 3}
-  m_PrefabInstance: {fileID: 3291525241978217376}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &735270096 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 457592, guid: f36479c73ce938a4a946477482ce20ab,
@@ -16982,7 +16996,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 2009815941}
-  - {fileID: 730876223}
   - {fileID: 1645013368}
   - {fileID: 271647996}
   - {fileID: 1817850028}
@@ -22667,7 +22680,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 116
+  m_Constraints: 112
   m_CollisionDetection: 0
 --- !u!195 &1122043744
 NavMeshAgent:
@@ -32670,7 +32683,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 828590404}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: -8, z: 0}
 --- !u!114 &1645013369
 MonoBehaviour:
@@ -36076,6 +36089,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1817850028}
+  - component: {fileID: 1817850030}
   - component: {fileID: 1817850029}
   m_Layer: 0
   m_Name: EncontrarChaveMansao
@@ -36092,11 +36106,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1817850027}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 66.03, y: -21.83, z: -164.25}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 828590404}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1817850029
 MonoBehaviour:
@@ -36107,15 +36121,29 @@ MonoBehaviour:
   m_GameObject: {fileID: 1817850027}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 33498356859fc2040b30fc2e60beac7f, type: 3}
+  m_Script: {fileID: 11500000, guid: 37fff5bb19450134f9e207f3823811fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Title: Chave
   Description: "Encontre a chave para a mans\xE3o. Ser\xE1 que os zumbis podem ser
     uma pista?"
   IsOptional: 0
-  DelayVisible: 2
-  ItemToPickup: {fileID: 887789485}
+  DelayVisible: 0
+  DestroyRoot: {fileID: 1817850028}
+--- !u!136 &1817850030
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1817850027}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  m_Radius: 0.4
+  m_Height: 1
+  m_Direction: 1
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!4 &1820190871 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 405124, guid: 513a0e1241d2a72459d1db2f9dc27f3e,
@@ -40998,7 +41026,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 828590404}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 3, z: 0}
 --- !u!114 &2001757519
 MonoBehaviour:
@@ -43448,7 +43476,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 828590404}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2111107407
 MonoBehaviour:
@@ -45031,6 +45059,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5174b5e414847cf4a9dca6e207326c8d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_Objectives: []
   m_listObjectives: {fileID: 828590403}
   m_ObjectivesGO: []
 --- !u!114 &1964991108747000032
@@ -47102,7 +47131,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 828590404}
+    m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 598277302063295018, guid: 012d63212fd1fe646b661cb8446c7bd4,
         type: 3}
@@ -47112,7 +47141,7 @@ PrefabInstance:
     - target: {fileID: 598277302063295018, guid: 012d63212fd1fe646b661cb8446c7bd4,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 598277302063295019, guid: 012d63212fd1fe646b661cb8446c7bd4,
         type: 3}
@@ -47137,22 +47166,22 @@ PrefabInstance:
     - target: {fileID: 598277302063295029, guid: 012d63212fd1fe646b661cb8446c7bd4,
         type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 17
       objectReference: {fileID: 0}
     - target: {fileID: 598277302063295029, guid: 012d63212fd1fe646b661cb8446c7bd4,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -295.79053
+      value: 18.76593
       objectReference: {fileID: 0}
     - target: {fileID: 598277302063295029, guid: 012d63212fd1fe646b661cb8446c7bd4,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -22.417618
+      value: 0.9873657
       objectReference: {fileID: 0}
     - target: {fileID: 598277302063295029, guid: 012d63212fd1fe646b661cb8446c7bd4,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -243.45447
+      value: 24.452301
       objectReference: {fileID: 0}
     - target: {fileID: 598277302063295029, guid: 012d63212fd1fe646b661cb8446c7bd4,
         type: 3}

@@ -90,6 +90,8 @@ public class ZombieController : MonoBehaviour
 
     void DeathAnimation() {
 
+        Destroy(zombieRB);
+        Destroy(this.GetComponent<NavMeshAgent>());
         zombieAnimator.SetBool("isDead", true);
 
     }
