@@ -14,6 +14,7 @@ public class ZombieController : MonoBehaviour
     public float moveSpeed;
     public float maxDist;
     public float minDist;
+    public float delayToAttack;
 
     float distToPlayer;
     Vector3 dirToMove;
@@ -24,9 +25,6 @@ public class ZombieController : MonoBehaviour
     
     void Start()
     {
-        moveSpeed = 2f;
-        maxDist = 10f;
-        minDist = 1.5f;
         distToPlayer = float.PositiveInfinity;
         zombieRB = this.GetComponent<Rigidbody>();
         dirToMove = Vector3.zero;
@@ -67,7 +65,7 @@ public class ZombieController : MonoBehaviour
         zombieAnimator.SetBool("isAttacking", false);
  
         dirToMove = (Player.position - transform.position).normalized;
-        dirToMove.y = 0;
+        // dirToMove.y = 0;
 
         zombieRB.AddForce(dirToMove * moveSpeed, ForceMode.VelocityChange);
 
@@ -80,18 +78,18 @@ public class ZombieController : MonoBehaviour
         zombieAnimator.SetBool("isWalking", false);
         zombieAnimator.SetBool("isAttacking", true);
         
-        if (distToPlayer <= minDist && attackCounter >= 3f) {
+        if (distToPlayer <= minDist && attackCounter >= delayToAttack) {
             Player.GetComponent<Health>().TakeDamage(0.05f, this.gameObject);
         }
 
-        attackCounter += 0.5f;
+        attackCounter += 0.05f;
 
     }
 
     void DeathAnimation() {
 
         Destroy(zombieRB);
-        Destroy(this.GetComponent<NavMeshAgent>());
+        Destroy(this.GetComponentInChildren<CapsuleCollider>());
         zombieAnimator.SetBool("isDead", true);
 
     }

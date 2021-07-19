@@ -1,11 +1,11 @@
-﻿using System.Collections.Generic;
+using System.Collections.Generic;
 using UnityEngine;
 
 namespace Unity.FPS.Game
 {
     public class ObjectiveManager : MonoBehaviour
     {
-        public List<Objective> m_Objectives = new List<Objective>();
+        List<Objective> m_Objectives = new List<Objective>();
         bool m_ObjectivesCompleted = false;
 
         public GameObject m_listObjectives;
