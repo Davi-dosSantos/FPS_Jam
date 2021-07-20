@@ -78,6 +78,8 @@ public class ZombieController : MonoBehaviour
 
     void AttackPlayer() {
 
+        transform.LookAt(new Vector3(Player.position.x, transform.position.y, Player.position.z));
+        
         zombieAnimator.SetBool("isWalking", false);
         zombieAnimator.SetBool("isAttacking", true);
         

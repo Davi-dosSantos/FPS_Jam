@@ -1,11 +1,12 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 
 namespace Unity.FPS.UI
 {
     public class NotificationToast : MonoBehaviour
     {
         [Tooltip("Text content that will display the notification text")]
-        public TMPro.TextMeshProUGUI TextContent;
+        public Text TextContent;
         [Tooltip("Canvas used to fade in and out the content")]
         public CanvasGroup CanvasGroup;
         [Tooltip("How long it will stay visible")]

@@ -14,7 +14,7 @@ public class NewAnin : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0))
         {
-            anim.SetTrigger("Active");
+            //anim.Play("Attack");
         }
     }
 }
