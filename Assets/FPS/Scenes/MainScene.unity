@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.22936943, g: 0.2551916, b: 0.32509872, a: 1}
+  m_IndirectSpecularColor: {r: 0.2294054, g: 0.25521177, b: 0.32522693, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1805,6 +1805,7 @@ GameObject:
   m_Component:
   - component: {fileID: 76197444}
   - component: {fileID: 76197445}
+  - component: {fileID: 76197446}
   m_Layer: 0
   m_Name: MatarDemonio
   m_TagString: Untagged
@@ -1820,13 +1821,26 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 76197443}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -80.68, y: 9.77, z: 181.22}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 828590404}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &76197445
+--- !u!65 &76197445
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 76197443}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 8.7035675, y: 6.295376, z: 4.576294}
+  m_Center: {x: -1.7332077, y: -5.6337337, z: 1.788147}
+--- !u!114 &76197446
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1835,16 +1849,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 76197443}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a3cff9918d8018a44989bf444e3232f3, type: 3}
+  m_Script: {fileID: 11500000, guid: 37fff5bb19450134f9e207f3823811fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Title: Demonio
-  Description: Elimine o demonio na catedral.
+  Title: Alem da Catedral
+  Description: "Expurgue o dem\xF4nio saia pelos fundos da catedral."
   IsOptional: 0
-  DelayVisible: 0
-  MustKillAllEnemies: 0
-  KillsToCompleteObjective: 1
-  NotificationEnemiesRemainingThreshold: 3
+  DelayVisible: 2
+  DestroyRoot: {fileID: 76197444}
 --- !u!1001 &78308658
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3558,7 +3570,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 155074738}
   m_LocalRotation: {x: -0, y: 0.014700709, z: -0, w: 0.99989194}
-  m_LocalPosition: {x: 244.44, y: 23.16, z: 438.28}
+  m_LocalPosition: {x: 244.44, y: 23.16, z: 430.53}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 927106821}
@@ -3673,7 +3685,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a70817e8ae84fb642bb942521e519958, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tempoDoAudio: 10
+  tempoDoAudio: 2
   player: {fileID: 4704865185068623876}
   Audio: {fileID: 155074740}
 --- !u!65 &155074742
@@ -6371,6 +6383,7 @@ GameObject:
   - component: {fileID: 273490638}
   - component: {fileID: 273490640}
   - component: {fileID: 273490639}
+  - component: {fileID: 273490641}
   m_Layer: 0
   m_Name: Respostas
   m_TagString: Untagged
@@ -6385,13 +6398,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 273490637}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7.51, y: 18.29, z: 302}
+  m_LocalRotation: {x: -0, y: 0.40555117, z: -0, w: 0.91407233}
+  m_LocalPosition: {x: 27.94, y: 18.29, z: 351}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 828590404}
   m_RootOrder: 8
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 47.851, z: 0}
 --- !u!114 &273490639
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6422,6 +6435,19 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 38.938644, y: 33.98297, z: 1}
   m_Center: {x: 18.678932, y: -3.8491402, z: 0}
+--- !u!114 &273490641
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 273490637}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d17f5d7411924b4881e71020b0af25c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 4704865185068623876}
 --- !u!1001 &275247862
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8486,7 +8512,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 348557298}
   m_LocalRotation: {x: -0, y: 0.014700709, z: -0, w: 0.99989194}
-  m_LocalPosition: {x: 244.44, y: 23.16, z: 409.06}
+  m_LocalPosition: {x: 251.82, y: 15.77, z: 383.8}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 927106821}
