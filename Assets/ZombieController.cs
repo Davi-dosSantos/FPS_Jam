@@ -17,11 +17,15 @@ public class ZombieController : MonoBehaviour
     public float maxDist;
     public float minDist;
     public float delayToAttack;
+    public float damageToPlayer;
 
     float distToPlayer;
     Vector3 dirToMove;
 
     float attackCounter;
+
+    public bool dropItem;
+    public GameObject itemToDrop;
 
     Health zombieHP;
     
@@ -84,9 +88,10 @@ public class ZombieController : MonoBehaviour
         zombieAnimator.SetBool("isAttacking", true);
         
         if (distToPlayer <= minDist && attackCounter >= delayToAttack) {
-            Player.GetComponent<Health>().TakeDamage(0.05f, this.gameObject);
+            Player.GetComponent<Health>().TakeDamage(damageToPlayer, this.gameObject);
             EnemyAudioStandby.Stop();
             EnemyATKaudio.Play();
+            attackCounter = 0f;
         }
         else
         {
@@ -94,7 +99,7 @@ public class ZombieController : MonoBehaviour
             EnemyAudioStandby.Play();
         }
 
-        attackCounter += 0.05f;
+        attackCounter += Time.deltaTime;
 
     }
 
@@ -105,6 +110,10 @@ public class ZombieController : MonoBehaviour
         zombieAnimator.SetBool("isDead", true);
         EnemyATKaudio.Stop();
         EnemyAudioStandby.Stop();
+        if (dropItem) {
+            Instantiate(itemToDrop, new Vector3(transform.position.x, transform.position.y + 3f, transform.position.z), Quaternion.identity);
+            dropItem = false;
+        }
         Destroy(Monstro, 3f);
     }
 }
