@@ -44,10 +44,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: de99b30e1e73fd14e98cc5371da25d12, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Radius: 0.1
+  Radius: 1
   Root: {fileID: 3659995153115176982}
   Tip: {fileID: 1135791333161367127}
-  MaxLifeTime: 0.002
+  MaxLifeTime: 0.005
   ImpactVfx: {fileID: 0}
   ImpactVfxLifetime: 0
   ImpactVfxSpawnOffset: 0
