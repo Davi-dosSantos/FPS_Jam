@@ -6,7 +6,9 @@ using Unity.FPS.Game;
 
 public class ZombieController : MonoBehaviour
 {
-
+    public GameObject Monstro;
+    public AudioSource EnemyAudioStandby;
+    public AudioSource EnemyATKaudio;
     public Transform Player;
     public Animator zombieAnimator;
     Rigidbody zombieRB;
@@ -25,6 +27,7 @@ public class ZombieController : MonoBehaviour
     
     void Start()
     {
+        EnemyAudioStandby.Play();
         distToPlayer = float.PositiveInfinity;
         zombieRB = this.GetComponent<Rigidbody>();
         dirToMove = Vector3.zero;
@@ -80,6 +83,13 @@ public class ZombieController : MonoBehaviour
         
         if (distToPlayer <= minDist && attackCounter >= delayToAttack) {
             Player.GetComponent<Health>().TakeDamage(0.05f, this.gameObject);
+            EnemyAudioStandby.Stop();
+            EnemyATKaudio.Play();
+        }
+        else
+        {
+            EnemyATKaudio.Stop();
+            EnemyAudioStandby.Play();
         }
 
         attackCounter += 0.05f;
@@ -91,6 +101,8 @@ public class ZombieController : MonoBehaviour
         Destroy(zombieRB);
         Destroy(this.GetComponentInChildren<CapsuleCollider>());
         zombieAnimator.SetBool("isDead", true);
-
+        EnemyATKaudio.Stop();
+        EnemyAudioStandby.Stop();
+        Destroy(Monstro, 3f);
     }
 }

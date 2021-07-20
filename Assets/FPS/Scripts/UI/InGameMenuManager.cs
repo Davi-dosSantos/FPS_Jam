@@ -8,6 +8,7 @@ namespace Unity.FPS.UI
 {
     public class InGameMenuManager : MonoBehaviour
     {
+        public AudioSource MusicaMenuPause;
 
         [Tooltip("Root GameObject of the menu used to toggle its activation")]
         public GameObject MenuRoot;
@@ -71,8 +72,8 @@ namespace Unity.FPS.UI
         
             if (!MenuRoot.activeSelf && Input.GetMouseButtonDown(0))
             {
-                Cursor.lockState = CursorLockMode.None;
-                Cursor.visible = true;
+                Cursor.lockState = CursorLockMode.Locked;
+                Cursor.visible = false;
             }
 
             if (Input.GetKeyDown(KeyCode.Escape))
@@ -125,13 +126,14 @@ namespace Unity.FPS.UI
                 Cursor.visible = true;
                 Time.timeScale = 0f;
                 AudioUtility.SetMasterVolume(VolumeWhenMenuOpen);
-
+                MusicaMenuPause.Play();
                 EventSystem.current.SetSelectedGameObject(null);
             }
             else
             {
                 Cursor.lockState = CursorLockMode.Locked;
                 Cursor.visible = false;
+                MusicaMenuPause.Stop();
                 Time.timeScale = 1f;
                 AudioUtility.SetMasterVolume(1);
             }
